@@ -1,5 +1,5 @@
 import StateSelector from "../utilities/StateSelector";
-import { blurContext, useBlur } from "../hooks/useBlur";
+import { blurContext } from "../context/BlurContext";
 import OM from "/assets/om.png";
 
 import { useContext } from "preact/hooks";

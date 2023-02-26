@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
-import { BlurContextProvider } from "./hooks/useBlur";
+import { BlurContextProvider } from "./context/BlurContext";
 
 export function App() {
     return (

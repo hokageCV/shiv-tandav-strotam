@@ -1,4 +1,4 @@
-import { useBlurContextProvider } from "../hooks/useBlur";
+import { useBlurContextProvider } from "../context/BlurContext";
 
 type ShlokType = {
     first1: string;
