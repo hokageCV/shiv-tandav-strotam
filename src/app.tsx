@@ -6,7 +6,7 @@ import { BlurContextProvider } from "./context/BlurContext";
 export function App() {
     return (
         <BlurContextProvider>
-            <div className=" bg-baseBG">
+            <div className=" bg-baseBG mx-0 px-0.5">
                 <Navbar />
                 <Content />
                 <Footer />

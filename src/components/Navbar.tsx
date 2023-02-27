@@ -9,7 +9,7 @@ export default function Navbar() {
     const { blur, changeBlur } = BlurLatest;
 
     return (
-        <div className="navbar bg-navBG sticky top-0 z-50  sm:flex xs:flex-col md:flex-row">
+        <div className="navbar bg-navBG sticky top-0 z-50  flex flex-col md:flex-row">
             <div className="logoHeading md:flex-1">
                 <span>
                     <img src={OM} alt="OM icon" width={50} height={50} className="m-1" />
