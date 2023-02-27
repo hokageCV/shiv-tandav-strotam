@@ -22,7 +22,7 @@ export default function Shlok({ first1, first2, second, third, fourth }: ShlokTy
             <div
                 className={`card-body w-full flex xs:flex-col justify-center items-center  md:text-md lg:text-lg  ${noSpacingOuter}`}
             >
-                <p className={pClass234}>
+                <p>
                     <span className={blur === "3" ? blurText : ""}>{first1}</span>
                     <span className={blur !== "1" ? blurText : ""}>{first2}</span>
                 </p>
