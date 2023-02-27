@@ -11,7 +11,7 @@ type ShlokType = {
 export default function Shlok({ first1, first2, second, third, fourth }: ShlokType) {
     const { blur } = useBlurContextProvider();
 
-    const blurText = "blur-lg hover:blur-none bg-blurBG hover:bg-blurHoverBG";
+    const blurText = "blur-lg group-hover:blur-none bg-blurBG group-hover:bg-blurHoverBG";
     const noSpacingOuter = "my-0.5 mx-0 py-1 px-0";
     const noSpacingInner = "m-0 p-0";
 
@@ -22,13 +22,15 @@ export default function Shlok({ first1, first2, second, third, fourth }: ShlokTy
             <div
                 className={`card-body w-full flex xs:flex-col justify-center items-center  md:text-md lg:text-lg  ${noSpacingOuter}`}
             >
-                <p>
+                <p className="group">
                     <span className={blur === "2" ? blurText : ""}>{first1}</span>
                     <span className={blur !== "0" ? blurText : ""}>{first2}</span>
+                    <p className={pClass234}>{second}</p>
                 </p>
-                <p className={pClass234}>{second}</p>
-                <p className={pClass234}>{third}</p>
-                <p className={pClass234}>{fourth}</p>
+                <div className="group">
+                    <p className={pClass234}>{third}</p>
+                    <p className={pClass234}>{fourth}</p>
+                </div>
             </div>
         </div>
     );
