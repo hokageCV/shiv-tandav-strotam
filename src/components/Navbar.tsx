@@ -3,10 +3,24 @@ import { blurContext } from "../context/BlurContext";
 import OM from "/assets/om.png";
 
 import { useContext } from "preact/hooks";
+import { playAudio0, playAudio1, playAudio2 } from "../utilities/playAudio";
 
 export default function Navbar() {
     const BlurData = useContext(blurContext);
     const { blur, changeBlurTo0, changeBlurTo1, changeBlurTo2 } = BlurData;
+
+    const handleClick0 = () => {
+        changeBlurTo0();
+        playAudio0();
+    };
+    const handleClick1 = () => {
+        changeBlurTo1();
+        playAudio1();
+    };
+    const handleClick2 = () => {
+        changeBlurTo2();
+        playAudio2();
+    };
 
     return (
         <div className="navbar bg-navBG sticky top-0 z-50  flex flex-col md:flex-row">
@@ -19,9 +33,9 @@ export default function Navbar() {
                 </p>
             </div>
             <div className="md:flex-none flex flex-row">
-                <StateSelector titleName="Show All" onClick={() => changeBlurTo0()} />
-                <StateSelector titleName="Show first few" onClick={() => changeBlurTo1()} />
-                <StateSelector titleName="Show None" onClick={() => changeBlurTo2()} />
+                <StateSelector titleName="Show All" onClick={() => handleClick0()} />
+                <StateSelector titleName="Show first few" onClick={() => handleClick1()} />
+                <StateSelector titleName="Show None" onClick={() => handleClick2()} />
             </div>
         </div>
     );
