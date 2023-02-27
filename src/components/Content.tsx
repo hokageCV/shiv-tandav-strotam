@@ -3,7 +3,7 @@ import Shlok from "../utilities/Shlok";
 
 export default function Content() {
     return (
-        <div className="flex flex-col justify-center items-center my-7 mx-7 p-2">
+        <div className="flex flex-col justify-center items-center my-7 mx-0.5 md:mx-7 p-0.5 md:p-2">
             {data.map((shlok) => (
                 <Shlok
                     first1={shlok.first1}
