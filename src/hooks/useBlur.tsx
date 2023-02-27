@@ -7,5 +7,9 @@ export const useBlur = () => {
 
     const changeBlur = (val: BlurType) => setBlur(val);
 
-    return { blur, changeBlur };
+    const changeBlurTo0 = () => changeBlur("1");
+    const changeBlurTo1 = () => changeBlur("2");
+    const changeBlurTo2 = () => changeBlur("3");
+
+    return { blur, changeBlurTo0, changeBlurTo1, changeBlurTo2 };
 };

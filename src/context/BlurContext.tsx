@@ -8,8 +8,12 @@ export const blurContext = createContext<ReturnType<typeof useBlur>>(
 );
 
 export const BlurContextProvider: FunctionComponent = ({ children }) => {
-    const { blur, changeBlur } = useBlur();
-    return <blurContext.Provider value={{ blur, changeBlur }}>{children}</blurContext.Provider>;
+    const { blur, changeBlurTo0, changeBlurTo1, changeBlurTo2 } = useBlur();
+    return (
+        <blurContext.Provider value={{ blur, changeBlurTo0, changeBlurTo1, changeBlurTo2 }}>
+            {children}
+        </blurContext.Provider>
+    );
 };
 
 export const useBlurContextProvider = () => {

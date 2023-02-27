@@ -5,8 +5,8 @@ import OM from "/assets/om.png";
 import { useContext } from "preact/hooks";
 
 export default function Navbar() {
-    const BlurLatest = useContext(blurContext);
-    const { blur, changeBlur } = BlurLatest;
+    const BlurData = useContext(blurContext);
+    const { blur, changeBlurTo0, changeBlurTo1, changeBlurTo2 } = BlurData;
 
     return (
         <div className="navbar bg-navBG sticky top-0 z-50  flex flex-col md:flex-row">
@@ -19,9 +19,9 @@ export default function Navbar() {
                 </p>
             </div>
             <div className="md:flex-none flex flex-row">
-                <StateSelector titleName="Show All" onClick={() => changeBlur("1")} />
-                <StateSelector titleName="Show first few" onClick={() => changeBlur("2")} />
-                <StateSelector titleName="Show None" onClick={() => changeBlur("3")} />
+                <StateSelector titleName="Show All" onClick={() => changeBlurTo0()} />
+                <StateSelector titleName="Show first few" onClick={() => changeBlurTo1()} />
+                <StateSelector titleName="Show None" onClick={() => changeBlurTo2()} />
             </div>
         </div>
     );
